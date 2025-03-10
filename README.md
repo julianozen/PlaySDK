@@ -1,6 +1,6 @@
 # Play SDK
 
-<!-- ![Play hero image](https://cdn.rive.app/play-logo.png) -->
+<!-- ![Play hero image](https://cdn.createwithplay.com/play-logo.png) -->
 
 An iOS Library for [Play](https://createwithplay.com) that supports both UIKit and SwiftUI.
 
@@ -8,7 +8,7 @@ The library is distributed through Swift Package Manager
 
 ## Play overview
 
-[Play](https://createwithplay.com) is a real-time interactive design and animation tool that helps teams create and run interactive animations anywhere. Designers and developers use our collaborative editor to create motion graphics that respond to different states and user inputs. Our lightweight open-source runtime libraries allow them to load their animations into apps, games, and websites.
+[Play](https://createwithplay.com) (TODO: add description of what Play SDK is )
 
 :house_with_garden: [Homepage](https://createwithplay.com/)
 
@@ -32,7 +32,7 @@ The package uses Swift Tools Version **5.8** and does not yet support Swift 6.
 
 Check out the `Examples/` folder for an example application using PlaySDK.
 
-TODO: show 
+TODO: potentially show code snippets here
 
 ## Issues
 
