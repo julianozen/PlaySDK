@@ -6,16 +6,6 @@ An iOS Library for [Play](https://createwithplay.com) that supports both UIKit a
 
 The library is distributed through Swift Package Manager
 
-## Table of contents
-
-- :star: [Play SDK Overview](#play-overview)
-- 🚀 [Getting Started & API docs](#getting-started)
-- :mag: [Supported Devices](#supported-devices)
-- :books: [Examples](#examples)
-<!-- - :runner: [Migration Guides](#migration-guides)
-- 👨‍💻 [Contributing](#contributing) -->
-- :question: [Issues](#issues)
-
 ## Play overview
 
 [Play](https://createwithplay.com) is a real-time interactive design and animation tool that helps teams create and run interactive animations anywhere. Designers and developers use our collaborative editor to create motion graphics that respond to different states and user inputs. Our lightweight open-source runtime libraries allow them to load their animations into apps, games, and websites.
