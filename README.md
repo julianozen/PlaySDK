@@ -52,7 +52,7 @@ Play will automatically add the necessary packages and entitlements to your exis
 
 ##### SwiftUI
 You can instantiate a component in your existing application by importing your package. 
-```
+```swift
 var body: some View {
     VStack(spacing: 16) {
         
@@ -74,7 +74,7 @@ var body: some View {
 
 ##### UIKit
 
-```
+```swift
 override func viewDidLoad() {
   super.viewDidLoad()
   // Add the component from Play SDK
