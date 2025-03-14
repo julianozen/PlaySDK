@@ -1,4 +1,6 @@
 # Play SDK
+![Play hero image](playToXcode.jpg)
+
 ## Play overview
 [Play](https://createwithplay.com/) is a visual platform for quickly designing interactive iOS apps and exporting production-ready Swift code in UIKit or SwiftUI. Now you can use Play to build, export, and ship your apps directly to the App Store.
 
