@@ -2,13 +2,21 @@
 ![Play hero image](playToXcode.jpg)
 
 ## Play overview
-[Play](https://createwithplay.com/) is a visual platform for quickly designing interactive iOS apps and exporting production-ready Swift code in UIKit or SwiftUI. Now you can use Play to build, export, and ship your apps directly to the App Store.
+[Play](https://createwithplay.com/) is a visual platform for designing interactive iOS apps. It allows you to use real iOS views to build and prototype your ideas and see them live on your device.
+
+With Play 3.0, the **PlaySDK** enables developers to export Play designs as production-ready code. Play generates highly performant native UIKit or SwiftUI code that integrates seamlessly with Xcode and can be safely shipped to production. The PlaySDK makes all of your Play styles, components, and assets accessible inside Xcode and the rest of your app. With **Play + PlaySDK**, anyone can design and build apps inside the Play app, export their work, and ship it to the App Store or integrate it into their existing iOS project.
 
 :house_with_garden: [Homepage](https://createwithplay.com/)
 
 :blue_book: [Play docs](https://createwithplay.com/docs)
 
 🛠 [Play Forums](https://createwithplay.com/community/forums/home)
+
+## Requirements
+
+- Currently, this SDK supports a minimum iOS version of **17.4+**.
+- The SDK is tested and developed using Xcode **16.2**.
+- The package uses Swift Tools Version **5.8** and does not yet support Swift 6.
 
 ## Getting started
 The library is distributed through Swift Package Manager
@@ -17,40 +25,29 @@ To get started with Play SDK, check out the following resources:
 
 - [Getting Started with Play SDK](https://createwithplay.com/playsdk/getting-started)
 
-## Supported devices
+<img width="700" alt="Screenshot 2025-03-14 at 3 42 38 PM" src="https://github.com/user-attachments/assets/b32f793d-1f9c-4689-abc0-714b3e501875" />
+### Quick Start
+To quickly see how PlaySDK works and how it can be embedded into an iOS app, check out the **example project** included in the repository. This project demonstrates how to integrate Play components and pages into an Xcode project.
 
-- Currently, this SDK supports a minimum iOS version of **17.4+**.
-- The SDK is tested and developed using Xcode **16.2**.
-- The package uses Swift Tools Version **5.8** and does not yet support Swift 6.
+1. Clone the PlaySDK repository.
+2. Open the `Examples/` folder.
+3. Run the example project in Xcode to explore PlaySDK in action.
 
-## Build and Run
+This example provides a hands-on look at how PlaySDK translates Play designs into a functional iOS app.
 
-### Installing Xcode from the App Store
-
-If you’ve never built an app before, you may need to install Xcode from the App Store. This tutorial make it really easy to find the right version of Xcode and install it. 
-[How to Make an App - Lesson 1 (Xcode 16 Updated)](https://www.youtube.com/watch?v=xkgaIm7QxK0&t=280s)
-
-Once you have Xcode installed, come back and open your project and hit run.
-
-<img width="842" alt="Screenshot_2025-03-11_at_3 35 50_PM" src="https://github.com/user-attachments/assets/27fe7e3f-f040-4004-beaa-e3dec80e7d63" />
-
-### Running your Xcode project for the first time
-
-When you export your project from Play, you'll receive an Xcode project file (with the **.xcodeproj** extension). To run your project for the first time, follow these steps:
-
-1. **Open the .xcodeproj:** Launch Xcode and open the exported `.xcodeproj` file or the existing project into which you imported Play.
-2. **Select a Target:** Choose the appropriate simulator or connected device from the device toolbar.
-3. **Build the Project:** Press `Command + B` or select **Product > Build** to compile the project and check for any errors.
-4. **Run the Project:** Press `Command + R` or select **Product > Run** to launch the app. The simulator or your device should display the app shortly.
-5. **Configure if Needed:** If running on a physical device, ensure your developer certificate is trusted and any required permissions are set in your project’s settings.
+You can get started with PlaySDK without having previously opened or used the Play application, though you may find it useful to install it to open Play files before exporting them. You can [download it here](https://createwithplay.com/).
 
 ### How do I import my Play project into my existing app?
 
-During the export process, Play gives you the option to add your project to an existing app. Simply hit **Publish**, then **Export**, and instead of creating a new project, select an existing Xcode project.
+<img width="700" alt="Screenshot 2025-03-14 at 3 43 22 PM" src="https://github.com/user-attachments/assets/fb25b4d1-53c5-46d2-a2fc-715bd6e5d320" />
+
+During the export process, Play gives you the option to add your project to an existing app. Simply hit **Publish**, then **Export New Project**, and instead of creating a new project, select an existing Xcode project.
 
 Play will automatically add the necessary packages and entitlements to your existing project.
 
 #### Using a Play Component in your existing application
+
+
 
 ##### SwiftUI
 You can instantiate a component in your existing application by importing your package. 
@@ -103,6 +100,15 @@ override func viewDidLoad() {
 
 Check out the `Examples/` folder and the [PlaySDK Documentation](https://createwithplay.com/playsdk/) for more examples of how to work with the PlaySDK.
 
+---
+
+## Explore More Play Projects
+
+You can check out our **gallery of projects** inside the Play app to explore more examples of what can be built with Play and PlaySDK. Download the app to browse these projects and see them in action: [Download Play](https://createwithplay.com/).
+
+🌤️ We just launched **Lume**, an full app built entirely with Play and PlaySDK—without writing a single line of code! Check it out on the App Store.
+
+---
 ## Issues
 
 Have an issue with using the runtime, or want to suggest a feature/API to help make your development life better? Log an issue in our [issues](https://github.com/CreateWithPlayApp/PlaySDK/issues) tab! You can also browse older issues and discussion threads there to see solutions that may have worked for common problems.
