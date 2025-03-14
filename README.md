@@ -26,6 +26,7 @@ To get started with Play SDK, check out the following resources:
 - [Getting Started with Play SDK](https://createwithplay.com/playsdk/getting-started)
 
 <img width="700" alt="Screenshot 2025-03-14 at 3 42 38 PM" src="https://github.com/user-attachments/assets/b32f793d-1f9c-4689-abc0-714b3e501875" />
+
 ### Quick Start
 To quickly see how PlaySDK works and how it can be embedded into an iOS app, check out the **example project** included in the repository. This project demonstrates how to integrate Play components and pages into an Xcode project.
 
