@@ -1,16 +1,19 @@
-# Play SDK
+# PlaySDK
 ![Play hero image](playToXcode.jpg)
 
-## Play overview
-[Play](https://createwithplay.com/) is a visual platform for designing interactive iOS apps. It allows you to use real iOS views to build and prototype your ideas and see them live on your device.
+## PlaySDK Overview
 
-With Play 3.0, the **PlaySDK** enables developers to export Play designs as production-ready code. Play generates highly performant native UIKit or SwiftUI code that integrates seamlessly with Xcode and can be safely shipped to production. The PlaySDK makes all of your Play styles, components, and assets accessible inside Xcode and the rest of your app. With **Play + PlaySDK**, anyone can design and build apps inside the Play app, export their work, and ship it to the App Store or integrate it into their existing iOS project.
+The **PlaySDK** enables developers to export Play designs as production-ready code. Play generates highly performant native UIKit or SwiftUI code that integrates seamlessly with your existing projects and can be safely shipped to production. The PlaySDK makes all of your Play styles, components, assets, views, and pages accessible inside Xcode.  
 
-:house_with_garden: [Homepage](https://createwithplay.com/)
+With **Play + PlaySDK**, anyone can design and build apps inside the Play app, export their work, integrate it into their existing codebase, and ship it to the App Store.  
 
-:blue_book: [Play docs](https://createwithplay.com/docs)
+**Check out this guide on getting started with PlaySDK:**  
+https://www.youtube.com/watch?v=JJ0kQthYDvU
 
-🛠 [Play Forums](https://createwithplay.com/community/forums/home)
+### What is Play?
+
+**Play** is a visual platform for designing interactive iOS apps. It allows you to use real iOS views to build and prototype your ideas and see them live on your device.  
+[You can download Play here.](https://createwithplay.com/)
 
 ## Requirements
 
@@ -19,56 +22,55 @@ With Play 3.0, the **PlaySDK** enables developers to export Play designs as prod
 - The package uses Swift Tools Version **5.8** and does not yet support Swift 6.
 
 ## Getting started
+
 The library is distributed through Swift Package Manager
 
-To get started with Play SDK, check out the following resources:
+To get started with PlaySDK, check out the following resources:
 
-- [Getting Started with Play SDK](https://createwithplay.com/playsdk/getting-started)
+- [Getting Started with PlaySDK](https://createwithplay.com/playsdk/getting-started)
 
-<img width="700" alt="Screenshot 2025-03-14 at 3 42 38 PM" src="https://github.com/user-attachments/assets/b32f793d-1f9c-4689-abc0-714b3e501875" />
+### Quick Start with Our Example Project
 
-### Quick Start
 To quickly see how PlaySDK works and how it can be embedded into an iOS app, check out the **example project** included in the repository. This project demonstrates how to integrate Play components and pages into an Xcode project.
 
-1. Clone the PlaySDK repository.
-2. Open the `Examples/` folder.
-3. Run the example project in Xcode to explore PlaySDK in action.
+1. Clone the PlaySDK repository.  
+2. Open the `Examples/` folder.  
+3. Run the example project in Xcode to explore PlaySDK in action.  
 
 This example provides a hands-on look at how PlaySDK translates Play designs into a functional iOS app.
 
-You can get started with PlaySDK without having previously opened or used the Play application, though you may find it useful to install it to open Play files before exporting them. You can [download it here](https://createwithplay.com/).
+You can get started with PlaySDK without having previously installing or using the Play application, though installing it may be useful for opening Play files before exporting them. [You can download Play on our website.](https://createwithplay.com/)
 
-### How do I import my Play project into my existing app?
+### How Do I Import My Play Project into My Existing App?
 
-<img width="700" alt="Screenshot 2025-03-14 at 3 43 22 PM" src="https://github.com/user-attachments/assets/fb25b4d1-53c5-46d2-a2fc-715bd6e5d320" />
+During the export process, Play gives you the option to add your project to an existing app. Simply hit **Publish**, then **Export New Project**, and instead of creating a new project, select an existing Xcode project. Play will automatically add the necessary packages and entitlements to your existing project.
 
-During the export process, Play gives you the option to add your project to an existing app. Simply hit **Publish**, then **Export New Project**, and instead of creating a new project, select an existing Xcode project.
+For detailed export steps, check out this guide:  
+[Exporting Play Projects to Xcode](https://learn.createwithplay.com/en/articles/10752714-play-to-xcode)
 
-Play will automatically add the necessary packages and entitlements to your existing project.
-
-#### Using a Play Component in your existing application
-
-
+#### Using a Play Component in Your Existing Application
 
 ##### SwiftUI
-You can instantiate a component in your existing application by importing your package. 
+
+You can instantiate a component in your existing application by importing your package.
+
 ```swift
 var body: some View {
-  VStack(spacing: 16) {
-    
-    // Add the component from Play SDK
-    Chip()
-    
-    // Set the Component's state (this component has 2 states: 'defaultState' & 'selected')
-    .state(currentState)
-    
-    // Do something when the state changes
-    // Tap the button to change its state
-    .onStateChange { state in
-      currentState = state
-      withAnimation() { isToggled.toggle() }
+    VStack(spacing: 16) {
+        
+        // Add the component from PlaySDK
+        Chip()
+        
+        // Set the Component's state (this component has 2 states: 'defaultState' & 'selected')
+            .state(currentState)
+        
+        // Do something when the state changes
+        // Tap the button to change its state
+            .onStateChange { state in
+                currentState = state
+                withAnimation() { isToggled.toggle() }
+            }
     }
-  }
 }
 ```
 
@@ -77,15 +79,15 @@ var body: some View {
 ```swift
 override func viewDidLoad() {
   super.viewDidLoad()
-  // Add the component from Play SDK
+  // Add the component from PlaySDK
   let myComponent = Chip()
   myComponent.translatesAutoresizingMaskIntoConstraints = false
   view.addSubview(myComponent)
   
   NSLayoutConstraint.activate([
-    myComponent.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-    myComponent.centerYAnchor.constraint(equalTo: view.centerYAnchor)
-    ])
+      myComponent.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+      myComponent.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+  ])
   
   // Set the Component's state (this component has 2 states: 'defaultState' & 'selected')
   myComponent.state(.selected)
@@ -93,23 +95,32 @@ override func viewDidLoad() {
   // Do something when the state changes
   // Tap the button to change its state.
   myComponent.onStateChange = { [weak self] animation in
-    self?.isToggled.toggle()
-    changeBackgroundColor()
+      self?.isToggled.toggle()
+      changeBackgroundColor()
   }
 }
 ```
 
-Check out the `Examples/` folder and the [PlaySDK Documentation](https://createwithplay.com/playsdk/) for more examples of how to work with the PlaySDK.
+Check out the `Examples/` folder and the [Implementing Play's SDK in Xcode Guide](https://learn.createwithplay.com/en/articles/10751622-implementing-play-s-sdk-in-xcode) for more examples of how to work with PlaySDK.
 
 ---
 
 ## Explore More Play Projects
 
-You can check out our **gallery of projects** inside the Play app to explore more examples of what can be built with Play and PlaySDK. Download the app to browse these projects and see them in action: [Download Play](https://createwithplay.com/).
+Discover our **gallery of projects** inside the Play app to see what can be built with Play and PlaySDK.  
+[Download Play](https://createwithplay.com/) to explore these projects in action.
 
-🌤️ We just launched **Lume**, an full app built entirely with Play and PlaySDK—without writing a single line of code! Check it out on the App Store.
+🌤️ We just launched **Lume**, a full app built entirely with Play and PlaySDK—without writing a single line of code! Check it out on the App Store.
 
 ---
+
+## Helpful Links
+
+📘 [Play Docs](https://createwithplay.com/docs)  
+🛠 [Play Forums](https://createwithplay.com/community/forums/home)  
+
+---
+
 ## Issues
 
-Have an issue with using the runtime, or want to suggest a feature/API to help make your development life better? Log an issue in our [issues](https://github.com/CreateWithPlayApp/PlaySDK/issues) tab! You can also browse older issues and discussion threads there to see solutions that may have worked for common problems.
+Have an issue with PlaySDK or a feature request? Log it in our [GitHub Issues](https://github.com/CreateWithPlayApp/PlaySDK/issues) tab! You can also browse older issues and discussions for solutions to common problems.
