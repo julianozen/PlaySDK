@@ -25,8 +25,6 @@ To get started with Play SDK, check out the following resources:
 
 - [Getting Started with Play SDK](https://createwithplay.com/playsdk/getting-started)
 
-<img width="700" alt="Screenshot 2025-03-14 at 3 42 38 PM" src="https://github.com/user-attachments/assets/b32f793d-1f9c-4689-abc0-714b3e501875" />
-
 ### Quick Start
 To quickly see how PlaySDK works and how it can be embedded into an iOS app, check out the **example project** included in the repository. This project demonstrates how to integrate Play components and pages into an Xcode project.
 
@@ -39,8 +37,6 @@ This example provides a hands-on look at how PlaySDK translates Play designs int
 You can get started with PlaySDK without having previously opened or used the Play application, though you may find it useful to install it to open Play files before exporting them. You can [download it here](https://createwithplay.com/).
 
 ### How do I import my Play project into my existing app?
-
-<img width="700" alt="Screenshot 2025-03-14 at 3 43 22 PM" src="https://github.com/user-attachments/assets/fb25b4d1-53c5-46d2-a2fc-715bd6e5d320" />
 
 During the export process, Play gives you the option to add your project to an existing app. Simply hit **Publish**, then **Export New Project**, and instead of creating a new project, select an existing Xcode project.
 
