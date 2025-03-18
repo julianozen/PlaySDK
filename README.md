@@ -48,7 +48,7 @@ During the export process, Play gives you the option to add your project to an e
 For detailed export steps, check out this guide:  
 [Exporting Play Projects to Xcode](https://learn.createwithplay.com/en/articles/10752714-play-to-xcode)
 
-## Using a Play Component in Your Existing Application
+#### Using a Play Component in Your Existing Application
 
 ##### SwiftUI
 
